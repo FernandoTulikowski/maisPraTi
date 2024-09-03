@@ -1,0 +1,45 @@
+/*Exercício 32:Escrever um algoritmo que lê uma matriz M(12,13) e divida todos os 13 elementos de cada uma das 12 linhas de M pelo maior
+elemento em módulo daquela linha. Escrever a matriz lida e a modificada. */
+
+function escreveMatriz(){
+    for(let i=0; i<2; i++){
+        m[i] = [];
+        for(let j=0; j<3; j++){
+            m[i][j] = parseInt(prompt("Digite um número: "));
+        }
+    }
+}
+
+function selecionaMaior(matriz){
+    for(let i=0; i<2; i++){
+        maior.push(Math.max(...matriz[i].map(Math.abs)));
+    }
+}
+
+function divideMatriz(matriz){
+    for(let i=0; i<2; i++){
+        x[i] = [];
+        for(let j=0; j<3; j++){
+            x[i][j] = (matriz[i][j] / maior[i]).toFixed(2);
+        }
+    }
+}
+
+
+
+const prompt = require('prompt-sync')();
+let m = [];
+let x = [];
+let maior = [];
+
+escreveMatriz();
+selecionaMaior(m);
+divideMatriz(m);
+console.log("Matriz M")
+console.log(m);
+console.log("Matriz Modificada");
+console.log(x);
+
+
+
+

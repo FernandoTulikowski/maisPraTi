@@ -1,0 +1,77 @@
+/*Exercício 32:Escrever um algoritmo que lê uma matriz M(12,13) e divida todos os 13 elementos de cada uma das 12 linhas de M pelo maior
+elemento em módulo daquela linha. Escrever a matriz lida e a modificada. */
+
+// function escreveMatriz(){
+//     for(let i=0; i<12; i++){
+//         m[i] = [];
+//         for(let j=0; j<13; j++){
+//             m[i][j] = parseInt(prompt("Digite um número: "));
+//         }
+//     }
+// }
+
+// function selecionaMaior(matriz){
+//     for(let i=0; i<12; i++){
+//         maior.push(Math.max(...matriz[i].map(Math.abs)));
+//     }
+// }
+
+// function divideMatriz(matriz){
+//     for(let i=0; i<12; i++){
+//         x[i] = [];
+//         for(let j=0; j<13; j++){
+//             x[i][j] = (matriz[i][j] / maior[i]).toFixed(2);
+//         }
+//     }
+// }
+
+
+
+
+// let x = [];
+// let maior = [];
+
+// escreveMatriz();
+// selecionaMaior(m);
+// divideMatriz(m);
+// console.log("Matriz M")
+// console.log(m);
+// console.log("Matriz Modificada");
+// console.log(x);
+
+/*Exercício 33:Faça um algoritmo que leia uma matriz 3 x 3 e após a leitura, multiplique os elementos da diagonal principal com a média dos elementos
+da diagonal secundária. */
+
+function escreveMatriz(){
+    for(let i=0; i<3; i++){
+        m[i] = [];
+        for(let j=0; j<3; j++){
+            m[i][j] = parseInt(prompt("Digite um número: "));
+        }
+    }
+}
+
+function calculaMediaDiagonalSecundaria(matriz){
+    let j = 0;
+    while(j<3){
+        for(let i=2; i>=0; i--){
+            media = (matriz[i][j]);
+            j++
+        }
+    }
+    console.log("passou aqui");
+    media = media/3;
+    console.log("media " + media);
+}
+
+
+const prompt = require('prompt-sync')();
+let m = [];
+let media = 0;
+escreveMatriz();
+console.log(m);
+calculaMediaDiagonalSecundaria(m);
+
+
+
+

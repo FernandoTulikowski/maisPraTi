@@ -1,0 +1,58 @@
+/*Exercício 35: Elaborar um algoritmo que leia um conjunto de 30 valores e os coloca em 2 vetores
+conforme forem pares ou ímpares. O tamanho do vetor é de 5 posições. Se algum vetor estiver cheio, escrevê-lo.
+Terminada a leitura, escrever o conteúdo dos dois vetores. Cada vetor pode ser preenchido quantas vezes forem necessárias. */
+
+// const prompt = require("prompt-sync")();
+// let pares = [];
+// let impares = [];
+
+// for(let i=0; i<30; i++){
+//     let valor = parseInt(prompt("Digite o valor " + (i+1) + " : "));
+//     if(valor % 2 === 0){
+//         if(pares.length === 5){
+//             console.log("Vetor PARES: " + pares);
+//             pares.length = 0; //zerar o vetor
+//         }
+//         pares.push(valor);
+//     } else{
+//         if(impares.length === 5){
+//             console.log("Vetor ÍMPARES: "+ impares);
+//             impares.length = 0; //zerar o vetor
+//         }
+//         impares.push(valor);
+//     }
+// }
+
+// console.log("vetor PARES: " + pares);
+// console.log("vetor ÍMPARES: " + impares);
+
+/*Exercício 36: Escreva um algoritmo que leia um vetor de 13 elementos inteiros, que é o Gabarito de um teste da loteria esportiva.
+Leia, a seguir, para cada um dos 100 apostadores, o número do seu cartão e um vetor de Respostas de 13 posições. Verifique para cada
+apostador o número de acertos, comparando o vetor de Gabarito com o vetor de Respostas. Escreva o número do apostador e o número de
+acertos. Se o apostador tiver 13 acertos, mostrar a mensagem "Parabéns, tu foi o GANHADOR". */
+
+function escreverGabarito(){
+    for(let i=0; i<13; i++){
+        gabarito.push(parseInt(prompt("Informe o valor " + (i+1) + "do gabarito:")));
+    }
+}
+
+function lerApostador(){
+    for(let i=0; i<2; i++){
+        let cartao = parseInt(prompt("Informe o número do cartão do apostador " + (i+1) + " : "));
+        let palpites = [];
+        for(let i=0; i<13; i++){
+            palpites.push(parseInt(prompt("Informe o valor " + (i+1) + "do palpite:")));
+        }
+        apostas.push({cartao:cartao, palpites:palpites});
+    }
+
+}
+
+const prompt = require("prompt-sync")();
+let gabarito = [];
+let apostas = [];
+
+escreverGabarito();
+lerApostador();
+console.log(apostas);
